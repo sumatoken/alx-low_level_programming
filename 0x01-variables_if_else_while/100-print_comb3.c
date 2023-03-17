@@ -18,6 +18,8 @@ int main(void)
 		{
 			putchar(d);
 			putchar(p);
+			if (p == '9' && d == '8')
+				continue;
 			putchar(',');
 			putchar(' ');
 		}
