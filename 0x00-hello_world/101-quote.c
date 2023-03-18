@@ -1,13 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
+#define STDERR_FILENO 2
+
 /**
  * main - Entry point
- * Return: Always 1 (Success)
+ *
+ * Return: 1
  */
 int main(void)
 {
-	write(STDERR_FILENO, "and that piece of art is useful
-			\" - Dora Korpar, 2015-10-19\n", 59);
+	char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	ssize_t len = 0;
+
+	while (msg[len] != '\0')
+		len++;
+	write(STDERR_FILENO, msg, len);
 	return (1);
 }
+
