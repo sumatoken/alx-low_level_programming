@@ -9,13 +9,16 @@
 
 int _isalpha(int c)
 {
-	char i;
+	char i, f;
 	int isAlpha = 0;
 
-	for (i = 'a'; i <= 'Z'; i++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		if (i == c)
-			isAlpha = 1;
+		for (f = 'A'; f <= 'Z'; f++)
+		{
+			if (i ==  c || f == c)
+				isAlpha = 1;
+		}
 	}
 	return (isAlpha);
 }
