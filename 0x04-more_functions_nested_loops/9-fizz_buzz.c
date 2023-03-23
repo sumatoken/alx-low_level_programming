@@ -1,5 +1,7 @@
+#include <stdio.h>
+
 /**
- * main - FIzz Buzz In C
+ * main - Fizz Buzz In C
  * Return: Always 0
  */
 
