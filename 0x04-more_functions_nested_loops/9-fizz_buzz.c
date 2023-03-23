@@ -16,7 +16,11 @@ int main(void)
 		else if (i % 5 == 0)
 			printf("%s", "Buzz ");
 		else if (i % 3 == 0)
+		{
+			if (i == 100)
+				printf("%s", "Fizz");
 			printf("%s", "Fizz ");
+		}
 		else
 			printf("%d\t", i);
 	}
